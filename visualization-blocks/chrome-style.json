@@ -1,0 +1,23 @@
+[
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1598249540956,
+		"name": "WPブロック可視化",
+		"sections": [
+			{
+				"code": "/*--------------------------------------\nブロックを可視化\n--------------------------------------*/\n.block-library-spacer__resize-container {\n    background: #333;\n    position: relative;\n}\n\n.block-library-spacer__resize-container:after {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    content: \"スペーサー\";\n    color: #ccc;\n}\n\n.block-library-spacer__resize-container.is-selected {\n    background: #555;\n}\n\np[aria-label^=\"空のブロック\"] {\n    background: #555;\n    color: #fff;\n}",
+				"regexps": [
+					"https?://.*?\\/wp-admin/.*"
+				]
+			}
+		],
+		"updateDate": 1598251933791,
+		"_id": "0a118d79-0737-4c03-82f4-cc947570af15",
+		"_rev": 1598251933791,
+		"id": 1
+	}
+]

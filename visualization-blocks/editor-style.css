@@ -1,5 +1,5 @@
 /*--------------------------------------
-可視化
+ブロック可視化
 --------------------------------------*/
 .block-library-spacer__resize-container {
     background: #333;
@@ -20,6 +20,6 @@
 }
 
 p[aria-label^="空のブロック"] {
-    background:  orange;
+    background:  #555;
     color: #fff;
 }
