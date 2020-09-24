@@ -1,5 +1,26 @@
+
 /*--------------------------------------
-サイドバー目次ハイライト
+サイドバー目次ハイライト シンプル
+--------------------------------------*/
+.mkj-side-style .mkj-content-in {
+	max-height: 400px; /*目次の高さ*/
+	overflow-y: scroll;
+	scroll-padding: 20% 0; /*ハイライトする見出しの位置*/
+}
+
+.mkj-side-style .mkj-list li > .mkj-active { /*見出し色*/
+	color: #02B1C3; /*強調色*/
+	border-radius: 50%;
+}
+
+.mkj-side-style .mkj-list > .mkj-marker::before { /*見出し丸*/
+	color: #fff;
+	background: #02B1C3; /*背景色*/
+	border-radius: 50%;
+}
+
+/*--------------------------------------
+サイドバー目次ハイライト 縦線あり
 --------------------------------------*/
 .mkj-side-style .mkj-content-in {
 	max-height: 400px; /*目次の高さ*/
