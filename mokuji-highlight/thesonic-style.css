@@ -1,0 +1,42 @@
+/*--------------------------------------
+サイドバー目次ハイライト
+--------------------------------------*/
+.mkj-side-style .mkj-content-in {
+	max-height: 400px; /*目次の高さ*/
+    overflow-y: scroll;
+    scroll-padding: 20% 0; /*ハイライトする見出しの位置*/
+}
+
+.mkj-side-style .mkj-list li > .mkj-active { /*見出し色*/
+	color: #02B1C3;
+}
+
+.mkj-side-style .mkj-list > .mkj-marker::before { /*見出し丸*/
+	color: #fff;
+    background: #02B1C3;
+}
+
+.mkj-side-style .mkj-list > li:before {
+    top: 4px;
+    background: #fff;
+    border: 2px solid #02B1C3;
+    color: #02B1C3;
+    /* border-radius: 50%; */
+}
+
+/*目次縦線*/
+.mkj-side-style .mkj-list > li:not(:last-child):after {
+	content:"";
+	width: 3px;
+    background: rgba(2,177,195, .1);
+    border-color: #fff;
+	display: block;
+	position: absolute;
+	top: 31px;
+	bottom: -9px;
+	left: -17.5px;
+}
+
+.mkj-side-style .mkj-list > li.mkj-marker::after { /*縦線*/
+	background: #02B1C3;
+}
