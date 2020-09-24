@@ -6,6 +6,8 @@
 
 - THE SONIC
 
+## THE SONIC
+
 thesonic-functions.php
 
 thesonic-style.css

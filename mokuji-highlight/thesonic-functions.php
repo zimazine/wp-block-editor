@@ -4,6 +4,7 @@
 function mkj_highlighter() {
 echo <<< EOM
 <script>
+if(window.matchMedia('(min-width:1030px)').matches){
 const mkjHighlight = (e) => {
     const hashes = document.querySelectorAll('.mkj-side-style a');
     const sy = window.pageYOffset;
@@ -27,6 +28,7 @@ const mkjHighlight = (e) => {
 };
 focus();
 window.addEventListener("scroll", mkjHighlight);
+}
 </script>
 EOM;
 }
