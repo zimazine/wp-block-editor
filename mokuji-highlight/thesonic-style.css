@@ -1,6 +1,5 @@
-
 /*--------------------------------------
-サイドバー目次ハイライト シンプル
+サイドバー目次ハイライト
 --------------------------------------*/
 .mkj-side-style .mkj-content-in {
 	max-height: 400px; /*目次の高さ*/
@@ -9,8 +8,8 @@
 }
 
 .mkj-side-style .mkj-list li > .mkj-active { /*見出し色*/
-	color: #02B1C3; /*強調色*/
-	border-radius: 50%;
+color: #02B1C3; /*強調色*/
+border-radius: 50%;
 }
 
 .mkj-side-style .mkj-list > .mkj-marker::before { /*見出し丸*/
@@ -18,9 +17,14 @@
 	background: #02B1C3; /*背景色*/
 	border-radius: 50%;
 }
+@media (max-width:1029px) {
+	.widget_tsnc_table_of_contents {
+		display: none;
+	}
+}
 
 /*--------------------------------------
-サイドバー目次ハイライト 縦線あり
+サイドバー目次ハイライト
 --------------------------------------*/
 .mkj-side-style .mkj-content-in {
 	max-height: 400px; /*目次の高さ*/
@@ -60,4 +64,10 @@
 
 .mkj-side-style .mkj-list > li.mkj-marker::after { /*縦線*/
 	background: #02B1C3;
+}
+
+@media (max-width:1029px) {
+	.widget_tsnc_table_of_contents {
+		display: none;
+	}
 }

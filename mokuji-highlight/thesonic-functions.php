@@ -4,11 +4,11 @@
 function mkj_highlighter() {
 echo <<< EOM
 <script>
-if(window.matchMedia('(min-width:1030px)').matches){
 const mkjHighlight = (e) => {
     const hashes = document.querySelectorAll('.mkj-side-style a');
     const sy = window.pageYOffset;
     const ey = sy + document.documentElement.clientHeight;
+    let userAgent = window.navigator.userAgent.toLowerCase();
     let focusEl = [null,null];
     hashes.forEach( (el) => {
         const targetEl = document.querySelector(el.hash);
@@ -21,14 +21,15 @@ const mkjHighlight = (e) => {
     if (focusEl.length) focusEl.forEach((el) => {
         el && el.classList.add("mkj-active");
         el && el.closest('.mkj-list > li').classList.add('mkj-marker');
-        el && el.scrollIntoView({
-            block: 'nearest'
-        });
+        if (userAgent.indexOf('msie') == 1 || userAgent.indexOf('edge') == -1) {
+            el && el.scrollIntoView({
+                block: 'nearest'
+            });
+        }
     });
 };
 focus();
 window.addEventListener("scroll", mkjHighlight);
-}
 </script>
 EOM;
 }
